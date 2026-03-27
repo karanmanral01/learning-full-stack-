@@ -1,46 +1,46 @@
-// greet();
+greet();
 
 
-// function greet(){
-//   console.log("hello");
-// }                               output - hello
+function greet(){
+  console.log("hello");
+}                               output - hello
 
 
-// Question 2. convert too arrow function
-// function multiply(a, b) {
-//   return a * b;
-// }
+Question 2. convert too arrow function
+function multiply(a, b) {
+  return a * b;
+}
 
-// output
-//  let multiply = (a, b)=>{
-//   return a * b;
-// };
-
-
-// function sayhi(name = "Guest"){
-//   console.log("hii", name);
-// }
-
-// sayhi();             output - hii Guest
+output
+ let multiply = (a, b)=>{
+  return a * b;
+};
 
 
-// function checkage(age){
-//   if (age <18) return "too young";
-//   return"allowed";
-// }
-// console.log(checkage(12));          output - too young
+function sayhi(name = "Guest"){
+  console.log("hii", name);
+}
 
-// function fn(){
-//   return;
-// }
-
-// console.log(fn());             output - undifiend
+sayhi();             output - hii Guest
 
 
-// function abcd(val){
-//   val();
-// }
+function checkage(age){
+  if (age <18) return "too young";
+  return"allowed";
+}
+console.log(checkage(12));          output - too young
 
-// abcd(function(){
-//   console.log("heyhey");
-// });
+function fn(){
+  return;
+}
+
+console.log(fn());             output - undifiend
+
+
+function abcd(val){
+  val();
+}
+
+abcd(function(){
+  console.log("heyhey");
+});
