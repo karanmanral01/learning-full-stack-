@@ -1,15 +1,15 @@
+Questions Practice
+
 let arr = [1, 2, 3, 4];
 let newarr = arr.map(function(val){
    return val * val;
 });
 
 
-
 let arr = [5, 12, 8, 20, 3];
 let newarr = arr.filter((val) => {
    return val > 10; 
 });
-
 
 
 let arr = [10, 20, 30];
