@@ -139,6 +139,119 @@ let obj = {
 console.log(obj);
 
 
+let obj = {
+    name: "karan",
+    age: 23,
+    isEnroled: true,
+}
+
+
+const obj = {
+    true: "yes", 
+    12: "answer",
+};
+
+console.log(obj[12]);
+console.log(obj[true]);
+
+
+const user = {
+    "first-name": "karan",
+};
+
+console.log(user["first-name"]);
+
+
+let key = "age";
+
+const user = {
+    age: 26, 
+};
+
+console.log(user[key]);
+
+
+const locations = {
+    city: "Bhopal",
+    coordinates: {
+        lat: 24.4,
+        lng: 54.8,
+    },
+};
+
+console.log(locations.coordinates.lat);
+
+
+const locations = {
+    city: "Bhopal",
+    coordinatess: {
+        lat: 24.4,
+        lng: 54.8,
+    },
+};
+
+console.log(locations?.coordinates?.lng);
+
+const locations = {
+    city: "Bhopal",
+    coordinates: {
+        lat: 24.4,
+        lng: 54.8,
+    },
+};
+
+let { city } = locations;
+let { lat } = locations.coordinates;
+
+
+const user = {
+    "first-name": "karan",
+};
+
+let {"first-name": firstName } = user;
+
+
+const course = {
+    title: "javascript",
+    duration: "4 week",
+};
+
+for (let key in course){
+    console.log(key);
+}
+
+
+const course = {
+    title: "javascript",
+    duration: "4 week",
+};
+
+console.log(Object.entries(course));
+
+
+
+const original = {a: 1, b: 2,};
+const copy = {...original};
+
+
+const obj1 = { info: {score: 80,},};
+const clone = {...obj1};
+clone.info.score = 100;
+console.log(obj1.info.score);
+
+
+
+const obj1 = { info: {score: 80,},};
+let newobj = structuredClone(obj1);
+newobj.info.score = 100
+console.log(newobj);
+
+
+const person = {};
+console.log(person?.profile?.name);
+
+
+
 
 
 
