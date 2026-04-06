@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body{
+  overflow: hidden;
+}
+
+
+main {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+button {
+    padding: 15px 30px;
+    font-weight: 600;
+    font-size: 20px;
+    background-color: brown;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    z-index: 9;
+}
+
+button:active {
+    scale: 0.90;
+}
+
+h1{
+    white-space: nowrap;
+}
