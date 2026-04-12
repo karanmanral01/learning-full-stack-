@@ -20,6 +20,7 @@ main {
     width: 100%;
     background: linear-gradient(to right bottom, rgb(26, 26, 26), rgb(30, 30, 30), black);
     padding: 20px;
+    overflow: auto;
 }
 
 section {
@@ -33,6 +34,13 @@ section {
 .all-reels {
     height: 100%;
     width: 100%;
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+.all-reels::-webkit-scrollbar{
+    display: none;
 }
 
 .reel {
@@ -40,11 +48,15 @@ section {
     width: 100%;
     position: relative;
     background-color: lightseagreen;
-    /* overflow: hidden; */
+    overflow: hidden;
     border-radius: 10px;
+    margin-bottom: 20px;
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
 }
 
-.reel img {
+
+.reel video {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -100,8 +112,12 @@ section {
     width: 40px;
     position: absolute;
     right: 0;
-    transform: translateX(100%);
+    /* transform: translateX(100%); */
     bottom: 12%;
+}
+
+.right h4 {
+    cursor: pointer;
 }
 
 .right i {
