@@ -39,7 +39,7 @@ section {
     scroll-behavior: smooth;
 }
 
-.all-reels::-webkit-scrollbar{
+.all-reels::-webkit-scrollbar {
     display: none;
 }
 
@@ -47,7 +47,7 @@ section {
     height: 100%;
     width: 100%;
     position: relative;
-    background-color: lightseagreen;
+    /* background-color: lightseagreen; */
     overflow: hidden;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -107,6 +107,7 @@ section {
     padding: 30px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 25px;
     text-align: center;
     width: 40px;
@@ -135,4 +136,18 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 50px;
+    cursor: pointer;
+}
+
+.like {
+    color: red;
+}
+
+.right>div h4 {
+    pointer-events: none;
+}
+
+.right>div h6 {
+    pointer-events: none;
 }

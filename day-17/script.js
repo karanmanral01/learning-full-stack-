@@ -111,23 +111,26 @@ const reels = [
     }
 ];
 
-var sum = ''
+var allReels = document.querySelector('.all-reels');
 
-reels.forEach(function (elem) {
-    sum = sum + `<div class="reel">
+function addData() {
+    var sum = ''
+
+    reels.forEach(function (elem, idx) {
+        sum = sum + `<div class="reel">
                     <video autoplay loop muted src="${elem.video}"></video>
                     <div class="bottom">
                         <div class="user">
                             <img src="${elem.userprofile}"
                                 alt="">
                             <h4>${elem.username}</h4>
-                            <button>${elem.isFollowed?'Unfollow':'follow'}</button>
+                            <button id = ${idx} class = "follow">${elem.isFollowed ? 'Unfollow' : 'follow'}</button>
                         </div>
                         <h3>${elem.caption}</h3>
                     </div>
                     <div class="right">
-                        <div class="like">
-                            <h4 .class="like-icon">${elem.isLiked?'<i class="ri-heart-3-line"></i>':'<i class="ri-heart-3-fill"></i>'}</h4>
+                        <div id = ${idx} class="like">
+                            <h4 .class="like-icon">${elem.isLiked ? '<i class="ri-heart-3-line"></i>' : '<i class="ri-heart-3-fill"></i>'}</h4>
                             <h6>${elem.likeCount}</h6>
                         </div>
                         <div class="comment">
@@ -143,10 +146,32 @@ reels.forEach(function (elem) {
                         </div>
                     </div>
                 </div> `
-});
+    });
 
-var allReels = document.querySelector('.all-reels');
+    allReels.innerHTML = sum
 
-allReels.innerHTML = sum
+}
 
+addData();
 
+allReels.addEventListener('click', function (dets) {
+    if (dets.target.className == 'like') {
+        if (!reels[dets.target.id].isLiked) {
+            reels[dets.target.id].likeCount++
+            reels[dets.target.id].isLiked = true
+        } else {
+            reels[dets.target.id].likeCount--
+            reels[dets.target.id].isLiked = false
+        }
+    }
+
+    if (dets.target.className == 'follow') {
+        if (!reels[dets.target.id].isFollowed) {
+            reels[dets.target.id].isFollowed = true
+        } else {
+            reels[dets.target.id].isFollowed = false
+        }
+    }
+
+    addData()
+})
