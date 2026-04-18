@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes bgcchange{
+    from{
+        background-color: rgb(255, 255, 255);
+        border-radius: 0px;
+        scale: 1;
+    }
+    to{
+        background-color: rgb(26, 35, 168);
+        border-radius: 50px;
+        scale: 0.5;
+    }
+}
+.box{
+    height: 200px;
+    width: 400px;
+    animation: bgcchange 5s infinite forwards alternate;
+}
