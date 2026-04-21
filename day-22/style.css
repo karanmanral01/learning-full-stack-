@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.box{
+    height: 200px;
+    width: 200px;
+}
+
+.red{
+    background-color: red;
+    anchor-name: --some-anchor;
+}
+
+.green{
+    background-color: green;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.anchor{
+    background-color: #b9b9b9;
+    border-radius: 10px;
+    position: absolute;
+    height: 50px;
+    width: 60px;
+    top:anchor(top);
+    left:anchor(left);
+    position-anchor: --some-anchor;
+}
